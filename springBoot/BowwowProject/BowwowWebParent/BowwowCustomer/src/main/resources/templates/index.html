@@ -50,9 +50,11 @@
 								<img th:src="@{${pro.mainImagePath}}" style="width:100%" class="card-img-top" />
 							</a>
 							<div class="card-body">
-								<div class="card-title">[[${pro.mainName}]] [[${pro.subName}]] </div>
+								<h5 class="card-title">[[${pro.mainName}]] [[${pro.subName}]] </h5>
 								<div class="card-content">
-									<div class="card-text">[[${pro.categoryId}]]</div>
+									<div class="card-text">[[${pro.categoryId}]]
+										<p><i class="fa-solid fa-star" style="color: #ffd70f; "></i>[[${new java.text.DecimalFormat("0.0").format(pro.score)}]]점</p>
+									</div>
 									<div class="card-bottom">
 										<div>
 											<h3 class="card-title text-danger">[[${pro.price}]]원</h3>									
@@ -88,9 +90,11 @@
 								<img th:src="@{${pro.mainImagePath}}" style="width:100%" class="card-img-top" />
 							</a>
 							<div class="card-body">
-								<div class="card-title">[[${pro.mainName}]] [[${pro.subName}]] </div>
+								<h5 class="card-title">[[${pro.mainName}]] [[${pro.subName}]] </h5>
 								<div class="card-content">
-									<div class="card-text">[[${pro.categoryId}]]</div>
+									<div class="card-text">[[${pro.categoryId}]]
+										<p><i class="fa-solid fa-star" style="color: #ffd70f; "></i>[[${new java.text.DecimalFormat("0.0").format(pro.score)}]]점</p>
+									</div>
 									<div class="card-bottom">
 										<div>
 											<h3 class="card-title text-danger">[[${pro.price}]]원</h3>									
@@ -129,9 +133,11 @@
 								<img th:src="@{${pro.mainImagePath}}" style="width:100%" class="card-img-top" />
 							</a>
 							<div class="card-body">
-								<div class="card-title">[[${pro.mainName}]] [[${pro.subName}]] </div>
+								<h5 class="card-title">[[${pro.mainName}]] [[${pro.subName}]] </h5>
 								<div class="card-content">
-									<div class="card-text">[[${pro.categoryId}]]</div>
+									<div class="card-text">[[${pro.categoryId}]]
+										<p><i class="fa-solid fa-star" style="color: #ffd70f; "></i>[[${new java.text.DecimalFormat("0.0").format(pro.score)}]]점</p>
+									</div>
 									<div class="card-bottom">
 										<div>
 											<h3 class="card-title text-danger">[[${pro.price}]]원</h3>									
@@ -194,8 +200,8 @@
 			console.log(btn);
 			$.post(url, params, function(response){
 				if(response == "OK"){					
-				if($('#like'+id).attr("class") == "fa-regular fa-heart icon-red  float-right"){
-					$('#like'+id).attr("class","fa-solid fa-heart icon-red  float-right");
+				if($('#like'+id).attr("class") == "fa-regular fa-heart icon-red float-right"){
+					$('#like'+id).attr("class","fa-solid fa-heart icon-red float-right");
 					$('#like'+id).attr("onclick","dislike("+id+")");
 				}
 			
@@ -219,9 +225,9 @@
 			console.log(btn);
 			$.post(url, params, function(response){
 				if(response == "OK"){					
-					if($('#like'+id).attr("class") == "fa-solid fa-heart icon-red  float-right"){
+					if($('#like'+id).attr("class") == "fa-solid fa-heart icon-red float-right"){
 						$('#like'+id).attr("onclick","like("+id+")");
-						$('#like'+id).attr("class","fa-regular fa-heart icon-red  float-right");
+						$('#like'+id).attr("class","fa-regular fa-heart icon-red float-right");
 					}
 				}else if(response == "NotUser"){
 					showModalDialog2("ㅜㅜ","로그인 하시겠습니까?")
