@@ -43,7 +43,7 @@ public class ReviewService {
 	
 	public Page<Review> findByProductId(int id,int pageNum) {
 		Pageable pageable = PageRequest.of(pageNum - 1,REVIEWS_PER_PAGE);
-		return reviewRepo.findByProductId(id,pageable);
+		return reviewRepo.findByProductIdOrderByRegDateDesc(id,pageable);
 	}
 		
 	public Product save(Product reviewScore) {

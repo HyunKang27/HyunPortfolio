@@ -10,7 +10,7 @@ import com.bowwow.common.entity.Review;
 
 public interface ReviewRepository extends PagingAndSortingRepository<Review, Integer> {
 
-	public Page<Review> findByProductId(int id, Pageable pageable);
+	public Page<Review> findByProductIdOrderByRegDateDesc(int id, Pageable pageable);
 
 	@Query("SELECT avg(score)FROM Review r WHERE r.product.id = :id")
 	public float getProductIdAvg(@Param("id")Integer id);
