@@ -302,13 +302,13 @@ DROP TABLE IF EXISTS `users`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `address` varchar(512) NOT NULL,
+  `address` varchar(512) DEFAULT NULL,
   `email` varchar(128) NOT NULL,
   `enabled` bit(1) DEFAULT NULL,
-  `name` varchar(45) NOT NULL,
+  `name` varchar(75) NOT NULL,
   `nick_name` varchar(128) NOT NULL,
   `password` varchar(64) NOT NULL,
-  `phone` varchar(64) NOT NULL,
+  `phone` varchar(64) DEFAULT NULL,
   `point` int(11) NOT NULL,
   `role` varchar(45) NOT NULL,
   PRIMARY KEY (`id`),
@@ -336,4 +336,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-03-17 17:49:29
+-- Dump completed on 2023-03-21 17:32:59

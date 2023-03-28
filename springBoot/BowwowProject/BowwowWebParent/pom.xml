@@ -17,12 +17,13 @@
 	<properties>
 		<java.version>15</java.version>
 	</properties>
-	
+	<!-- 하위 모듈 등록-->
 	<modules>
 		<module>BowwowAdmin</module>
 		<module>BowwowCustomer</module>
 	</modules>
 	
+	<!-- 외부 test 결제시스템 repository-->
 	<repositories>
 		<repository>
 		    <id>jitpack.io</id>
@@ -31,66 +32,67 @@
 	</repositories>
 	
 	<dependencies>
+		<!--  RESTful API 등 웹 애플리케이션 빌드-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		
+		<!-- boot제공 security 사용-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
-		
+		<!-- Thymeleaf 템플릿 사용-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
-
+		<!-- JUnit 테스트 library -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
+		<!-- MySQL 데이터베이스 JDBC 드라이버-->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-		
+		<!-- spring data jpa library  ::  데이터베이스 액세스 및 관리-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
-		
+		<!-- bootstrap webjar에 추가 -->
 		<dependency>
 			<groupId>org.webjars</groupId>
 			<artifactId>bootstrap</artifactId>
 			<version>4.3.1</version>
 		</dependency>
-		
+		<!-- Querydsl library  JPA쿼리 관리 -->
 		<dependency>
 			<groupId>org.webjars</groupId>
 			<artifactId>jquery</artifactId>
 			<version>3.4.1</version>
 		</dependency>
-		
+		<!-- 웹 라이브러리 WebJars관리-->
 		<dependency>
 			<groupId>org.webjars</groupId>
 			<artifactId>webjars-locator-core</artifactId>
 		</dependency>
-		
+		<!-- Thymeleaf를 Spring security5와 통합-->
 		<dependency>
 			<groupId>org.thymeleaf.extras</groupId>
 			<artifactId>thymeleaf-extras-springsecurity5</artifactId>
 		</dependency>
-
+		<!-- 통합 데이터관리 모듈 의존성 추가-->
 		<dependency>
 			<groupId>com.bowwow</groupId>
 			<artifactId>BowwowCommon</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		
+		<!-- 외부 test결제시스템 의존성 추가-->
 		<dependency>
 		    <groupId>com.github.iamport</groupId>
 		    <artifactId>iamport-rest-client-java</artifactId>

@@ -6,7 +6,7 @@
   <packaging>pom</packaging>
   <name>BowwowProject</name>
   <description>BowwowProject</description>
-  
+  <!-- 하위 모듈 등록-->
   <modules>
 	  <module>BowwowCommon</module>
 	  <module>BowwowWebParent</module>

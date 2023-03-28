@@ -26,7 +26,7 @@
 				<h5 style="margin-left: 30px; margin-bottom: 10px;">[[${orderDetail.status}]]</h5>
 				<div class="row">
 					<div class="col-lg-3 col-md-12 col-sm-12 d-flex justify-content-center align-items-center buying-info">
-							<a th:href="@{'/product/detail/1/' + ${orderDetail.product.id}}"><img th:src="@{${orderDetail.product.mainImagePath}}" style="width:100px" class="img-fluid"/></a>
+							<a th:href="@{'/product/detail/' + ${orderDetail.product.id} + '/1'}"><img th:src="@{${orderDetail.product.mainImagePath}}" style="width:100px" class="img-fluid"/></a>
 						</a>
 					</div>
 					<div class="col-lg-2 col-md-12 col-sm-12">
